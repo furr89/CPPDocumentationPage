@@ -1,0 +1,109 @@
+html {
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.4;
+    background-color: #282928;
+    color: #F0F0E8;
+}
+
+#navbar {
+    height: 100%;
+    width: 250px; /* Must be == */
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: #5D5D5D;
+}
+
+#navbar > a {
+    font-size: 1.7rem;
+    font-weight: 800;
+    padding: 0.5em 0 0.5em 1.2em;
+    display: block;
+}
+
+#navbar > header {
+    padding: 0.5em 0 0.5em 0.9em;
+    display: block;
+}
+
+#main-doc {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-left: 250px; /* Must be == */
+    padding: 1.2em 7% 1.2em 1.5em;
+}
+
+p {
+    margin-right: 1em; 
+}
+
+.section-body {
+    margin-left: 1em;
+    margin-bottom: 1.8em;
+}
+
+code {
+    display: block;
+    background-color: #5D5D5D;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 1em;
+}
+
+.comment {
+    color: #4ABD41;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #F0F0E8;
+}
+
+.nav-link:hover {
+    text-decoration: none;
+    color: #4ABD41;
+}
+
+.section-body>ul>li>a:visited {
+    text-decoration: none;
+    color: #4ABD41;
+}
+
+.section-body>ul>li>a {
+    text-decoration: none;
+    color: #4ABD41;
+}
+
+.section-body>ul>li>a:hover {
+    text-decoration: none;
+    color: #63E36D;
+}
+
+header {
+    font-size: 2.4rem;
+    font-weight: 900;
+}
+
+@media only screen and (max-width: 750px){
+
+    #navbar {
+        position: relative;
+        width: 100%;
+    }
+    
+    #navbar > a {
+        display: inline-block;
+    }
+
+    #main-doc {
+        padding: 1.2em 0 1.2em 1em;
+        margin: 1em;
+        width: 80%
+    }
+
+    p, code {
+        margin-right: 0; 
+    }
+    
+}

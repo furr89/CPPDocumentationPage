@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="css/styles.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        
+        <title>C++ Documentation</title>
+
+    </head>
+
+    <body>
+
+        <nav id="navbar">
+            <header>C++ Docs</header>
+
+            <a class="nav-link" href="#Introduction">Introduction</a>
+            <a class="nav-link" href="#Hello_World">Hello World</a>
+            <a class="nav-link" href="#Variables">Variables</a>
+            <a class="nav-link" href="#Conditionals">Conditionals</a>
+            <a class="nav-link" href="#Loops">Loops</a>
+            <a class="nav-link" href="#Pointers">Pointers</a>
+            <a class="nav-link" href="#Functions">Functions</a>
+            <a class="nav-link" href="#Reference">Reference</a>
+        </nav>
+
+        <main id="main-doc">
+
+            <section id="Introduction" class="main-section">
+                <header>Introduction</header>
+                
+                <div class="section-body">
+
+                    <p>
+                        C++ is an object-oriented programming language chosed by many to build large-scale, 
+                        high performant applications. It is used when there is a need for performance or when 
+                        low-level programming is important, here are some use cases:
+                    </p>
+    
+                    <ul>
+                        <li>Embedded software and robotics</li>
+                        <li>Operating systems</li>
+                        <li>Games </li>
+                    </ul>
+
+                </div>
+
+            </section>
+
+            <section id="Hello_World" class="main-section">
+                <header>Hello World</header>
+
+                <div class="section-body">
+                    
+                    <p>
+                        To get started, here's how you would output to the console the text "Hello World!"
+                    </p>
+
+                    <code>
+                        #include &lt;iostream&gt; <br><br>
+                        int main() { <br>
+                            &emsp; std::cout &lt;&lt; "Hello World!"; <br>
+                        } <br><br>
+
+                        <span class="comment">// Outputs: Hello World!</span>
+
+                    </code>
+
+                </div>
+
+            </section>
+
+            <section id="Variables" class="main-section">
+                <header>Variables</header>
+
+                <div class="section-body">
+                    
+                    <p>C++ is a strongly typed language, meaning every variable must be decrared with its type, the 
+                        reason is because each type takes up a different amount of space in memory so the compiler has
+                        to reserve the amount. It is possible to declare
+                    </p>
+                    <code>
+                        int a; <span class="comment">// Declare an integer variable</span> <br>
+                        int a, b, c; <span class="comment">// Declares multiple integer varaibles at once</span> <br>
+                        bool yes; <span class="comment">// Decrate a boolean variable</span> <br>
+                    </code>
+
+                    <p>
+                        It is possible to declare a varaible without initializing it, but it will be assigned a random value 
+                         and the compiler will throw an error, therefore, it is important to initialise it with a value.
+                    </p>
+                    <code>
+                        int x = 5; <span class="comment">// Declare and initialise an integer</span> <br>
+                        int y = x + 3; <span class="comment">// Declare and initialise an integer equal to a previously created variable</span> <br>
+                        float z = 3.14; <span class="comment">// Declare and initialise a float</span> <br><br>
+                        std::string str; <span class="comment">// Can declare a string</span> <br>
+                        str = "Hello"; <span class="comment">// Then initialise it</span> <br>
+                    </code>
+
+                    <p>
+                        Using namespaces
+                    </p>
+
+                    <code>
+                        #include &lt;iostream&gt; <br>
+                        using namespace std; <br><br>
+                        int main() { <br>
+                            &emsp; string str; <span class="comment">// Can ommit the 'std::'</span> <br>
+                            &emsp; str = "Hello"; <br>
+                        } <br>
+
+                    </code>
+
+                </div>
+
+
+            </section>
+
+            <section id="Conditionals" class="main-section">
+                <header>Conditionals</header>
+
+                <div class="section-body">
+                    
+                    <p>Condionals are executed if the given condition is true. The syntax is similar to: 
+                        if condition then statement. It can be written without braces if there is a single statement.
+                    </p>
+                    <code>
+                        if (a == 4) <br>
+                        &emsp; cout &lt;&lt; "a is 4"; <br>
+                    </code>
+
+                    <p>
+                        There are many other operators such as
+                    </p>
+                    <code>
+                        &lt; <span class="comment"> // Less than</span> <br>
+                        &gt; <span class="comment"> // Greater than</span> <br>
+                        &lt;= <span class="comment"> // Less than or equal to</span> <br>
+                        &gt;= <span class="comment"> // Greater than or equal to</span> <br>
+                    </code>
+
+                    <p>
+                        There are also different statements that can be executed if the first one is false
+                    </p>
+                    <code>
+                        if (a == 4) {<br>
+                        &emsp; cout &lt;&lt; "a is 4"; <br>
+
+                        } <br> <br>
+
+                        else if (a > 4) { <br>
+                            &emsp; cout &lt;&lt; "a is greater than 4"; <br>
+                        } <br> <br>
+
+                        else { <br>
+                            &emsp; cout &lt;&lt; "a is less than 4"; <br>
+                        }
+                    </code>
+
+                </div>
+
+
+            </section>
+
+            <section id="Loops" class="main-section">
+                <header>Loops</header>
+
+                <div class="section-body">
+                    
+                    <p>
+                        While loops repeat the given statement while it is true. The loop ends once it is no longer true. They 
+                        must also have a decrement or an increment otherwise, it will be an infinite loop.
+                    </p>
+                    <code>
+                        int n = 5; <br>
+                        while (n >= 0) { <br>
+                            &emsp; cout &lt;&lt; n &lt;&lt; endl; <br>
+                            &emsp; n--; <br>
+                        } <br> <br>
+
+                        <span class="comment">// Outputs numbers 5 to 0 on new lines.</span>
+                    </code>
+    
+                    <p>
+                        For loops are useful when you want to iterate a number of times, it is also great when iterating through 
+                        strings or arrays and their indexes can be accessed at the ith location.
+                    </p>
+                    <code>
+                        for (int i = 1; i &lt;= 10; i++) { <br>
+                            &emsp; cout &lt;&lt; i &lt;&lt; endl; <br>
+                        } <br><br>
+
+                        <span class="comment">// Outputs numbers 1 to 10 on new lines.</span>
+                    </code>
+
+                </div>
+
+
+            </section>
+
+            <section id="Pointers" class="main-section">
+                <header>Pointers</header>
+
+                <div class="section-body">
+                    
+                    <p>
+                        When creating a variable, it is stored in memory and to get a reference to that variable, you 
+                        can use the '&' operator to get the address. 
+                    </p>
+                    <code>
+                        var = 16; <br>
+                        varRef = &amp;var; <span class="comment"> // Memory address of var</span> <br>
+                        x = var; <br>
+                        varVal = *varRef; <span class="comment"> // Pointer to the variable stored in memory, equal to 16</span> <br>
+                    </code>
+
+                </div>
+
+
+            </section>
+
+            <section id="Functions" class="main-section">
+                <header>Functions</header>
+
+                <div class="section-body">
+                    
+                    <p>
+                        In C++, funcitons are declared with a type and a name, parameters if needed, and then the statement. 
+                        Functions of type void, don't need to return anything and neither does main() but anything else, for example,
+                        a bool type function would have to return a bool, an int type function would have to return an int and so on.
+                    </p>
+                    <code>
+                        bool canRun(int number) { <br>
+                        &emsp; if (number == 5) <br>
+                        &emsp;&emsp;&emsp; return true; <br><br>
+
+                        &emsp; return false; <br>
+                        }
+                    </code>
+
+                </div>
+
+
+            </section>
+
+            <section id="Reference" class="main-section">
+                <header>Reference</header>
+
+                <div class="section-body">
+                    
+                    <ul>
+                        <li>
+                            This documentation page was taken from <a href="https://cplusplus.com/doc/tutorial/">cpluscplus</a>
+                        </li>
+                        <li>
+                            Challenge from <a href="https://www.freecodecamp.org/">freeCodeCamp</a>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </section>
+
+
+        </main>
+        
+    </body>
+
+</html>
